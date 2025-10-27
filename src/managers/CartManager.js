@@ -1,8 +1,9 @@
 const fs = require('fs');
+const path = require('path');
 
 class CartManager {
-  constructor() {
-    this.path = './data/carts.json';
+  constructor(filePath) {
+    this.path = filePath || path.join(__dirname, '../data/carts.json');
   }
 
   async getCarts() {

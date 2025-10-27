@@ -1,8 +1,9 @@
 const fs = require('fs');
+const path = require('path');
 
 class ProductManager {
-    constructor() {
-        this.path = './data/products.json';
+    constructor(filePath) {
+        this.path = filePath || path.join(__dirname, '../data/products.json');
     }
 
     async getProducts() {

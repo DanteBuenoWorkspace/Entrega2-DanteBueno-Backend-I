@@ -2,10 +2,10 @@ const express = require('express');
 const { Server } = require('socket.io');
 const handlebars = require('express-handlebars');
 const path = require('path');
-const ProductManager = require('./managers/ProductManager');
+const ProductManager = require('./managers/ProductManager.js');
 
-const productsRouter = require('./routers/products.router');
-const cartsRouter = require('./routers/carts.routers');
+const productsRouter = require('./routers/products.router.js');
+const cartsRouter = require('./routers/carts.routers.js');
 
 const app = express();
 const PORT = 8080;
