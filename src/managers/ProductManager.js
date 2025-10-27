@@ -42,7 +42,7 @@ class ProductManager {
 
         products.push(product);
 
-        await fs.promises.mkdir('data', { recursive: true });
+        await fs.promises.mkdir(path.dirname(this.path), { recursive: true });
 
         await fs.promises.writeFile(this.path, JSON.stringify(products, null, 2));
 
